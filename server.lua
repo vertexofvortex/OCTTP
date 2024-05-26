@@ -135,6 +135,10 @@ function router:run(port)
   self._listenerId = event.listen("modem_message", router._serverequest)
 end
 
+function router:stop()
+  event.cancel(router._listenerId)
+end
+
 function router:GET(url, handler)
   self._handlers.GET[url] = handler
 end
