@@ -46,7 +46,7 @@ A handler function should return one ore two [serializable](https://ocdoc.cil.li
 
 router:POST("/resources/{id}/info", function(request, params)
     print("Request data, name:", request.data.name)
-    print("Request data, description:". request.data.description)
+    print("Request data, description:", request.data.description)
 
     return nil, {
         status = 501,
